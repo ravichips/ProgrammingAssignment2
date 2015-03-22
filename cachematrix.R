@@ -22,8 +22,8 @@ makeCacheMatrix <- function(sourceMatrix = matrix()) {
         ## Hence, both the variables are accessed via the <<- operator
         sourceMatrix <<- newMatrix
 
-        ## When a new sourceMatrix is set, we need to reset the corresponding invered matrix to NULL
-        ## thus enforcing a recomputation in cacheSolve
+        ## When a new sourceMatrix is set, we need to reset the corresponding inverted matrix to NULL
+        ## thus enforcing a re-computation in cacheSolve
         invertedMatrix <<- NULL
     }
 
@@ -44,8 +44,8 @@ makeCacheMatrix <- function(sourceMatrix = matrix()) {
 }
 
 ## Func returns an inverted matrix corresponding to a source matrix
-## thats accessed via the functions listed in formal param: matrixAccessFuncList.
-## Returns a cached vrsion of the inverted matrix, if available.
+## that is accessed via the functions listed in formal param: matrixAccessFuncList.
+## Returns a cached version of the inverted matrix, if available.
 ## Otherwise, computes, sets the inverted matrix in the cache & returns it ben do
 cacheSolve <- function(matrixAccessFuncList) {
 
